@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cocos2D-JS ES2015 Boilerplate</title>
+    <!-- build:js -->
+    <script type="text/javascript" src="framework/cocos2d-js-v3.10.js"></script>
+    <script type="text/javascript" src="./dist/game.build.js"></script>
+    <!-- endbuild -->
+    <style>
+        body {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+<canvas id="gameCanvas" width="800" height="450"></canvas>
+<script type="text/javascript">
+    window.onload = function () {
+        cc.game.run("gameCanvas");
+    };
+</script>
+</body>
+</html>
