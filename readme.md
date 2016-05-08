@@ -2,6 +2,10 @@
 
 This boilerplate add ES6 futures in cocos2d-js by dint of babel. For build and packing used gulp.
 
+- Live reload
+- ES6 futures
+- Compress *.js files in one.
+
 ### Version
 1.0.0
 
@@ -22,7 +26,7 @@ $ npm install
 ```
 ### Build
 ```sh
-npm build
+npm publish
 ```
 
 ### Run

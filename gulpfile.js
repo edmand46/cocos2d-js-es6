@@ -1,8 +1,9 @@
 var uglify = require('gulp-uglify');
 var gulp = require('gulp');
 var del = require('del');
-var watch = require('gulp-watch');
+var webserver = require('gulp-webserver');
 var htmlreplace = require('gulp-html-replace');
+var jscursh = require('gulp-jscrush');
 var concat = require('gulp-concat');
 var babel = require('gulp-babel');
 
@@ -15,7 +16,7 @@ gulp.task('compile', ['clean'], () => {
 });
 
 gulp.task('compress', ['compile'], () => {
-    return gulp.src(['./cocos2d-js-v3.10.js', './dist/*'])
+    return gulp.src(['./framework/cocos2d-js-v3.10.js', './dist/*'])
         .pipe(concat('game.build.js'))
         .pipe(uglify())
         .pipe(gulp.dest('dist'));
@@ -59,9 +60,29 @@ gulp.task('compress-debug', ['compile'], () => {
         .pipe(uglify())
         .pipe(gulp.dest('dist'));
 });
+gulp.task('obfuscate', () => {
+    return gulp.src('./framework/cocos2d-js-v3.10.js').pipe(jscursh()).pipe(gulp.dest('./build'));
+});
 
 gulp.task('build', ['copy-resources']);
+
 gulp.task('default', ['clean-trash-debug'] , () => {
+    gulp.src('./')
+        .pipe(webserver({
+            livereload: {
+                enable : true,
+                filter: function(fileName) {
+                    if (fileName.match('node_moduels') || fileName.match('dist')) { // exclude all source maps from livereload
+                        return false;
+                    } else {
+                        return true;
+                    }
+                }
+            },
+            directoryListing: true,
+            open: './index.html'
+        }));
+
     gulp.watch(['./src/**/*.js', './main.js'], function(event) {
         gulp.run('clean-trash-debug');
     });
