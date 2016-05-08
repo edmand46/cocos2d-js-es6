@@ -6,7 +6,7 @@ This boilerplate add ES6 futures in cocos2d-js project by dint of babel. For bui
 - ES6 futures
 - Compress *.js files in one.
 
-### Video
+### Youtube
 [![VIDEO]
 (https://img.youtube.com/vi/CowHp3VW9TU/0.jpg)]
 (https://www.youtube.com/watch?v=CowHp3VW9TU)
