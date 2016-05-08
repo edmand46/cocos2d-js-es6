@@ -1,6 +1,6 @@
 # Cocos2D-JS-ES6
 
-This boilerplate add ES6 futures in cocos2d-js by dint of babel. For build and packing used gulp.
+This boilerplate add ES6 futures in cocos2d-js project by dint of babel. For build and packing used gulp.
 
 - Live reload
 - ES6 futures
