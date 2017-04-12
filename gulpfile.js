@@ -16,7 +16,7 @@ gulp.task('compile', ['clean'], () => {
 });
 
 gulp.task('compress', ['compile'], () => {
-    return gulp.src(['./framework/cocos2d-js-v3.10.js', './dist/*'])
+    return gulp.src(['./framework/cocos2d-js-v3.14.1.js', './dist/*'])
         .pipe(concat('game.build.js'))
         .pipe(uglify())
         .pipe(gulp.dest('dist'));
