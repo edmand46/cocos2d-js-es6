@@ -7,9 +7,8 @@ This boilerplate has been added ES6 futures in cocos2d-js project by dint of bab
 - Compress *.js files in one.
 
 ### Youtube
-[![VIDEO]
-(https://img.youtube.com/vi/CowHp3VW9TU/0.jpg)]
-(https://www.youtube.com/watch?v=CowHp3VW9TU)
+
+[![VIDEO](https://img.youtube.com/vi/CowHp3VW9TU/0.jpg)](https://www.youtube.com/watch?v=CowHp3VW9TU)
 
 ### Version
 1.0.0
